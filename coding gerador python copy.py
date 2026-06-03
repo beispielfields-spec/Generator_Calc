@@ -1,4 +1,4 @@
-\par pip install -- upgrade pip
+# \par pip install -- upgrade pip
 \par import numpy as np
 \par import matplotlib.pyplot as plt
 \par import pandas as pd

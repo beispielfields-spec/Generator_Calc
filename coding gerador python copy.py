@@ -46,22 +46,6 @@
 \pnlcltr\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang 
 {\pntxtb (}{\pntxta )}}\pard\plain \ltrpar\ql \li0\ri0\sa200\sl276\slmult1\widctlpar\wrapdefault\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0\pararsid5395146 \rtlch\fcs1 \af31507\afs22\alang1025 \ltrch\fcs0 
 \f31506\fs22\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\rtlch\fcs1 \af31507 \ltrch\fcs0 \lang1046\langfe1033\langnp1046\insrsid5395146\charrsid5395146 # -*- coding: utf-8 -*-
-\par """
-\par Aplica\'e7\'e3o de dimensionamento fotovoltaico \endash  vers\'e3o 3.13
-\par 
-\par Requisitos (pip install):
-\par     - numpy
-\par     - matplotlib
-\par     - pandas
-\par 
-\par Funcionalidades:
-\par     1. Leitura de 12 valores mensais via input()
-\par     2. C\'e1lculo de consumo anual, m\'e9dia mensal/dia
-\par     3. C\'e1lculo de pot\'eancia pico (P_pico)
-\par     4. C\'e1lculo de capacidade de bateria (kWh e Ah)
-\par     5. Visualiza\'e7\'e3o em gr\'e1ficos: barra lateral + linha de m\'e9tricas
-\par }{\rtlch\fcs1 \af31507 \ltrch\fcs0 \insrsid5395146 """
-\par 
 \par import numpy as np
 \par import matplotlib.pyplot as plt
 \par }{\rtlch\fcs1 \af31507 \ltrch\fcs0 \lang1046\langfe1033\langnp1046\insrsid5395146\charrsid5395146 import pandas as pd
@@ -70,9 +54,6 @@
 \par # 1. Leitura dos 12 valores mensais
 \par # --------------------------------------------------
 \par def ler_consumo_mensal() -> list[float]:
-\par     """
-\par     Pergunta ao usu\'e1rio os 12 consumos mensais (kWh) e retorna uma lista de floats.
-\par     """
 \par     valores = []
 \par     print("Digite o consumo mensal (kWh) para cada m\'eas (12 valores).")
 \par     }{\rtlch\fcs1 \af31507 \ltrch\fcs0 \insrsid5395146 for mes in range(1, 13):
@@ -91,9 +72,6 @@
 \par # 2. C\'e1lculos
 \par # --------------------------------------------------
 \par def calcular_metricas(consumos: list[float]) -> dict:
-\par     """
-\par     Realiza todos os c\'e1lculos necess\'e1rios e devolve um dicion\'e1rio com resultados.
-\par     """
 \par     # Convers\'e3o para numpy array para opera\'e7\'f5es vetorizadas
 \par     arr = np.array(consumos)
 \par 
@@ -138,11 +116,6 @@
 \par # 3. Visualiza\'e7\'e3o
 \par # --------------------------------------------------
 \par def plotar_graficos(consumos: list[float], metricas: dict) -> None:
-\par     """
-\par     Cria um figure com:
-\par       - Barra lateral (consumo mensal)
-\par       - Linha de m\'e9tricas (P_pico, capacidade_kwh)
-\par     }{\rtlch\fcs1 \af31507 \ltrch\fcs0 \insrsid5395146 """
 \par     meses = [f"\{i:02d\}" for i in range(1, 13)]
 \par 
 \par     fig = plt.figure(constrained_layout=True, figsize=(12, 6))
